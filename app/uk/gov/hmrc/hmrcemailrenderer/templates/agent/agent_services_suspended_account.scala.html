@@ -1,0 +1,41 @@
+@*
+* Copyright 2023 HM Revenue & Customs
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*@
+@(params: Map[String, Any])
+
+@agencyName() = {@params("agencyName")}
+@arn() = {@params("arn")}
+@contactName() = {@params("contactName")}
+@contactEmail() = {@params("emailAddress")}
+@telephoneNumber() = {@params("telephoneNumber")}
+@agentMessage() = {@params("agentMessage")}
+
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Agent services suspended account") {
+
+    <h2>Agent contact about account suspension</h2>
+
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0;">Agent name: @agencyName()</p>
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0;">Agent Reference Number: @arn</p>
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0;">Contact name: @contactName</p>
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0;">Contact email address: @contactEmail</p>
+    <p style="font-size: 19px; line-height: 1.315789474; margin-bottom: 20px;">Contact telephone number: @telephoneNumber</p>
+
+    <p style="font-size: 19px; line-height: 1.315789474; margin-bottom: 20px;">
+        This agent has given the following details about the suspension of their services account:
+    </p>
+    <p style="font-size: 19px; line-height: 1.315789474; margin-bottom: 20px;">@agentMessage()</p>
+
+    <p style="font-size: 19px; line-height: 1.315789474; margin-bottom: 20px;">From HMRC Agent Services team</p>
+}

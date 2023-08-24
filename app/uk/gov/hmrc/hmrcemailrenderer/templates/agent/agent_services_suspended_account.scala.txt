@@ -1,0 +1,15 @@
+@(params: Map[String, Any])Agent services suspended account
+
+Agent contact about account suspension
+
+Agent name: @params("agencyName")
+Agent Reference Number: @params("arn")
+Contact name: @params("contactName")
+Contact email address: @params("contactEmail")
+Contact telephone number: @params("telephoneNumber")
+
+This agent has given the following details about the suspension of their services account:
+
+@params("agentMessage")
+
+From HMRC Agent Services team
